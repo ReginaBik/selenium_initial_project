@@ -30,6 +30,9 @@ And user should be able to see “Instagram” icon and hyperlink reference for 
                 System.out.println("Sub Heading is validated");
             else System.out.println("Sub Heading is failed");
 
+            //-    this is -  //div[@data-aid='SOCIAL_SOCIAL_LINKS']/a[1] - facebook xPath
+            //-    This is  - //div[@data-aid='SOCIAL_SOCIAL_LINKS']/a[2] - instagram xpath
+
 
             List<WebElement> elements = driver.findElements(By.xpath("//a[contains(@data-aid,'SOCIAL_')]"));
             String[] expectedLinks = {"https://www.facebook.com/103179127717601", "https://www.instagram.com/comfyelite"};
@@ -39,7 +42,9 @@ And user should be able to see “Instagram” icon and hyperlink reference for 
                 System.out.println(elements.get(i).getAttribute("href").equals(expectedLinks[i]) ? "Social media links are are as expected" : "Its failed");
             }
 
-            driver.quit();
+
+
+            Driver.quitDriver();
 
 
         }

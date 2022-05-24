@@ -26,9 +26,9 @@ travel, office and home.”
 
         if(driver.findElement(By.id("dynamic-tagline-48605")).getText().equals("High quality comfy pillows and accessories for travel, office and home."))
             System.out.println("Header tag is validated");
-        else System.out.println("Header tag is failed");
+        else throw new RuntimeException("Header tag is not validated");
 
-        driver.quit();
+        Driver.quitDriver();
 
     }
 }
